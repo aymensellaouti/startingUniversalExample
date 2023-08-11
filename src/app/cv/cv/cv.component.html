@@ -1,8 +1,5 @@
 <div class="row">
-  <div class="col" *ngIf="(cvs$ |async)?.length">
-    <app-list [cvs]="cvs$ | async" ></app-list>
-  </div>
-  <div class="col">
-    <app-card></app-card>
+  <div class="col" *ngIf="(cvs$ | async)?.length">
+    <app-list [cvs]="cvs$ | async"></app-list>
   </div>
 </div>

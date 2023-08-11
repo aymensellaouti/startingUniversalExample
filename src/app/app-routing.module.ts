@@ -7,11 +7,11 @@ const routes: Routes = [
     path: "cv",
     loadChildren: () => import("./cv/cv.module").then((m) => m.CvModule),
   },
-  {
+  /*   {
     path: "",
     redirectTo: "cv",
     pathMatch: "full",
-  },
+  }, */
   { path: "home", component: HomeComponent },
 ];
 
