@@ -13,4 +13,8 @@ export class CvService {
   getCvs(): Observable<Cv[]> {
     return this.http.get<Cv[]>(CONSTANTES.CV_API_BACKEND);
   }
+
+  getCvById(id: number): Observable<Cv> {
+    return this.http.get<Cv>(CONSTANTES.CV_API_BACKEND + id);
+  }
 }

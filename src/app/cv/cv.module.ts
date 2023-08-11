@@ -7,14 +7,14 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AddComponent } from "./add/add.component";
 import { RouterModule } from "@angular/router";
 import { DefaultImagePipe } from "./default-image.pipe";
-import { CardComponent } from "./card/card.component";
+import { DetailsCvComponent } from "./details-cv/details-cv.component";
 @NgModule({
   declarations: [
     AddComponent,
-    CardComponent,
     CvComponent,
     ListComponent,
     ItemComponent,
+    DetailsCvComponent,
     DefaultImagePipe,
   ],
   imports: [
@@ -27,6 +27,10 @@ import { CardComponent } from "./card/card.component";
       {
         path: "add",
         component: AddComponent,
+      },
+      {
+        path: ":id",
+        component: DetailsCvComponent,
       },
     ]),
     FormsModule,
